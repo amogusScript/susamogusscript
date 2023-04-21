@@ -1,0 +1,137 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local sus = Instance.new("TextButton")
+local die = Instance.new("TextButton")
+local fate = Instance.new("TextButton")
+local silly = Instance.new("TextButton")
+local swer = Instance.new("TextButton")
+local dex = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(212, 255, 0)
+Frame.BorderColor3 = Color3.fromRGB(53, 0, 0)
+Frame.Position = UDim2.new(0.428829908, 0, 0.325436413, 0)
+Frame.Size = UDim2.new(0, 333, 0, 230)
+Frame.Draggable = true
+Frame.Selectable = true 
+Frame.Active = true
+
+TextLabel.Parent = Frame
+TextLabel.Active = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.Position = UDim2.new(0.198198199, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 26)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "bummaster 5 script"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 27.000
+TextLabel.TextWrapped = true
+
+sus.Name = "sus"
+sus.Parent = Frame
+sus.BackgroundColor3 = Color3.fromRGB(255, 21, 224)
+sus.Position = UDim2.new(0.0420420431, 0, 0.152173907, 0)
+sus.Size = UDim2.new(0, 84, 0, 50)
+sus.Font = Enum.Font.SourceSans
+sus.Text = "say amogus"
+sus.TextColor3 = Color3.fromRGB(0, 0, 0)
+sus.TextScaled = true
+sus.TextSize = 14.000
+sus.TextWrapped = true
+sus.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("amogus","all")	
+end)
+
+die.Name = "die"
+die.Parent = Frame
+die.BackgroundColor3 = Color3.fromRGB(194, 0, 0)
+die.BorderColor3 = Color3.fromRGB(255, 0, 0)
+die.BorderSizePixel = 4
+die.Position = UDim2.new(0.246246248, 0, 0.730434775, 0)
+die.Size = UDim2.new(0, 176, 0, 50)
+die.Font = Enum.Font.IndieFlower
+die.Text = "die button"
+die.TextColor3 = Color3.fromRGB(0, 0, 0)
+die.TextScaled = true
+die.TextSize = 14.000
+die.TextWrapped = true
+die.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+fate.Name = "fate"
+fate.Parent = Frame
+fate.BackgroundColor3 = Color3.fromRGB(11, 121, 255)
+fate.Position = UDim2.new(0.684684694, 0, 0.152173907, 0)
+fate.Size = UDim2.new(0, 91, 0, 50)
+fate.Font = Enum.Font.SourceSans
+fate.Text = "fat admin"
+fate.TextColor3 = Color3.fromRGB(0, 0, 0)
+fate.TextScaled = true
+fate.TextSize = 14.000
+fate.TextWrapped = true
+fate.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();	
+end)
+
+
+silly.Name = "silly"
+silly.Parent = Frame
+silly.BackgroundColor3 = Color3.fromRGB(71, 255, 83)
+silly.BorderSizePixel = 4
+silly.Position = UDim2.new(0.0240240246, 0, 0.4173913, 0)
+silly.Size = UDim2.new(0, 58, 0, 122)
+silly.Font = Enum.Font.Creepster
+silly.Text = "silly inf yeld"
+silly.TextColor3 = Color3.fromRGB(0, 0, 0)
+silly.TextScaled = true
+silly.TextSize = 14.000
+silly.TextWrapped = true
+silly.MouseButton1Down:connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+swer.Name = "swer"
+swer.Parent = Frame
+swer.BackgroundColor3 = Color3.fromRGB(147, 232, 255)
+swer.BorderColor3 = Color3.fromRGB(112, 90, 35)
+swer.BorderSizePixel = 5
+swer.Position = UDim2.new(0.807807803, 0, 0.413043469, 0)
+swer.Size = UDim2.new(0, 57, 0, 128)
+swer.Font = Enum.Font.Merriweather
+swer.Text = "swear at people script"
+swer.TextColor3 = Color3.fromRGB(0, 0, 0)
+swer.TextScaled = true
+swer.TextSize = 14.000
+swer.TextWrapped = true
+swer.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp'),true))()
+end)
+
+
+dex.Name = "dex"
+dex.Parent = Frame
+dex.BackgroundColor3 = Color3.fromRGB(85, 170, 127)
+dex.Position = UDim2.new(0.498190582, 0, 0.437655866, 0)
+dex.Size = UDim2.new(0, 104, 0, 50)
+dex.Font = Enum.Font.LuckiestGuy
+dex.Text = "sick new dex"
+dex.TextColor3 = Color3.fromRGB(0, 0, 0)
+dex.TextScaled = true
+dex.TextSize = 14.000
+dex.TextWrapped = true
+dex.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/peyton2465/Dex/master/out.lua"))()
+end)
